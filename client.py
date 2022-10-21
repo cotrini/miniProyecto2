@@ -4,7 +4,7 @@ from random import randint
 class Client:
 
     def __init__(self, time):
-        self.__itemsAmount = randint(1, 135)
+        self.__itemsAmount = randint(1, 35)
         self.__payMethod = randint(1,2) #This attribute contain 1 for cash or 2 for card
         self.__timeStamp = time
 

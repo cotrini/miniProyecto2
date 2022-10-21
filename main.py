@@ -61,8 +61,10 @@ def simulation1(simulationTime, clientsPerMinut):
             cashier3.setBusyTime(ceil(serveCustomer(cashier3, client)))
         elif(cashier3.getBusyStatus()):
             cashier3.timeChanger()
-    print('The Average time in 3 cashier and three lines simulation is: ')
-    print((sum(waitingTimeList)/len(waitingTimeList))/60, ' Minuts')
+    print('The Average time in 3 cashier and three lines simulation per client is: ')
+    print((sum(waitingTimeList)/len(waitingTimeList)), ' Minuts')
+    print('Amount of clients served: ',len(waitingTimeList))
+    print('Amount of clients not served: ',(clientsQueue1.size() + clientsQueue2.size() + clientsQueue3.size()))
     print(8*'_')
 
 def simulation2(simulationTime, clientsPerMinut):
@@ -108,16 +110,20 @@ def simulation2(simulationTime, clientsPerMinut):
        
 
 
-    print('The Average time in 3 cashier and one line simulation is: ')
-    print((sum(waitingTimeList)/len(waitingTimeList))/60, ' Minuts')
+    print('The Average time in 3 cashier and one line simulation per client is: ')
+    print((sum(waitingTimeList)/len(waitingTimeList)), ' Minuts')
+    print('Amount of clients served: ',len(waitingTimeList))
+    print('Amount of clients not served: ',clientsQueue.size())
     print(8*'_')
     
 
 
 for i in range(10):
 
-    simulation1(10000, 36)
-    simulation2(10000, 36)
+    print('Simulation ',i + 1)
+    simulation1(480, 6)
+    simulation2(480, 6)
+    print(8*'_')
 
 
 
