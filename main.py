@@ -124,7 +124,7 @@ for i in range(10):
     print(8*'--')
     simulation1(480, 36)
     simulation2(480, 36)
-    print(8*'_')
+    print(8*'*')
 
 
 
