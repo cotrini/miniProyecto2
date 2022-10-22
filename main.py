@@ -25,8 +25,8 @@ def simulation1(simulationTime, clientsPerMinut):
         if(minut % clientsPerMinut == 0):
             possibility = randint(0,1)  # possibility make new client into any client queue if is 1 , 0 makes nothing
             if(possibility == 1):
-                queueElection = randint(1,3) #queue election put client into any queue
                 for i in range(randint(1, 5)): #this for makes it possible for 1 to 5 people to arrive in line at that moment
+                    queueElection = randint(1,3)
                     if(queueElection == 1):
                         newClient = Client(minut)
                         clientsQueue1.enQueue((newClient.getItemsAmount(), newClient.getPayMethod(), newClient.getTimeStamp()))
