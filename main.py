@@ -119,10 +119,11 @@ def simulation2(simulationTime, clientsPerMinut):
 
 
 for i in range(10):
-
+    print(8*'--')
     print('Simulation ',i + 1)
-    simulation1(480, 6)
-    simulation2(480, 6)
+    print(8*'--')
+    simulation1(480, 36)
+    simulation2(480, 36)
     print(8*'_')
 
 
