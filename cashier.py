@@ -1,4 +1,5 @@
 from random import uniform
+from random import gauss
 
 # This class simulates the behavior of a cashier of some entity, financial, commercial or of any kind
 class Cashier:
@@ -9,14 +10,14 @@ class Cashier:
 
     #This function simulate query, items or transaction from the client or user to cashier or employee
     def passItem(self):
-        return uniform(0.1, 1.0) # In minutos
+        return gauss(0.1, 0.1) # In minutos
 
     #This function simulate one action from client to cashier, collect money, ask for qualification, or do nothing
     def receive(self, payMethod):
         if(payMethod == 1):  #1 for cash
-            return uniform(1, 5)
+            return gauss(0.5, 0.12)
         else:
-            return uniform(0.5, 5) #2 to debit
+            return uniform(0.2, 0.1) #2 to debit
 
     def setBusyStatus(self, status):
         self.__busyStatus = status
