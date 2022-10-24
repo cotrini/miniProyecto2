@@ -9,7 +9,7 @@ class Cashier:
 
     #This function simulate query, items or transaction from the client or user to cashier or employee
     def passItem(self):
-        return gauss(0.1, 0.1) # In minutos
+        return gauss(0.14, 0.2) # In minutos
 
     #This function simulate one action from client to cashier, collect money, ask for qualification, or do nothing
     def receive(self, payMethod):
