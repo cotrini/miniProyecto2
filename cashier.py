@@ -14,9 +14,9 @@ class Cashier:
     #This function simulate one action from client to cashier, collect money, ask for qualification, or do nothing
     def receive(self, payMethod):
         if(payMethod == 1):  #1 for cash
-            return gauss(0.5, 0.12)
+            return gauss(0.5, 0.17)
         else:
-            return gauss(0.2, 0.1) #2 to debit
+            return gauss(0.2, 0.08) #2 to debit
 
     def setBusyStatus(self, status):
         self.__busyStatus = status
